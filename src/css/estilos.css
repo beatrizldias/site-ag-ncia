@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,800;1,200&display=swap');
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* o asterisco serve para estilizar todos os elementos html da pagina 
+
+vamos zerar a margin e o padding --- primeiro está resetando para depois iniciar o codigo
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* começar o código aqui */ 
+
+/* CABEÇALHO 
+flex display site -  css tricks - estilos visuais
+*/
+
+.cabecalho .logo .imagem{
+    width: 100px;
+}
+
+.cabecalho {
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cabecalho .logo{
+    display:flex;    
+    align-items: center; /*colocar o nome agencia XPTO no centro */ 
+    text-transform: uppercase; /*colocar o nome agencia XPTO em caixa alta*/ 
+}
+
+.cabecalho .titulo{
+    margin-left: 7px; /*desgrudar o nome da figura */
+    font-size: 17px;
+    transition: 0.3S ease-in-out;/*para alterar quando passar o cursor em cima*/
+    font-weight: 800 ; 
+}
+
+.cabecalho .titulo:hover{
+    color: #16a347
+}
+/*hover é para deixar o cursor em forma de "clique"*/
+
+.cabecalho .menu{
+    display: flex;
+}
+
+.cabecalho .navegacao .menu .item{
+    margin: 10px;
+
+}
+
+.cabecalho .navegacao .menu .item a{
+    padding: 15px;
+    transition: 0.3S ease-in-out;
+
+}
+
+.cabecalho .navegacao .menu .item a:hover{
+   background-color: #16a347;
+   color: white ; 
+}
+
+/*painel*/
+
+.conteudo-principal .paineis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative; /*posicionar um elemento seria a seta de um lado e do outro */
+}
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat:no-repeat;
+    background-size: cover; /* cubrir toda a imagem da div*/
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1; /* pra imagem ir pra tras e a escrita aparecer*/
+    filter: brightness(70%)
+}
+
+
+.conteudo-principal .paineis .projeto1{
+  background-image:url('../imagens/painel1.jpg'); 
+
+}
+
+.conteudo-principal .paineis .projeto2{
+    background-image:url('../imagens/painel2.jpg'); 
+  }
+
+  .conteudo-principal .paineis .projeto3{
+    background-image:url('../imagens/painel3.jpg'); 
+  }
+
+  .conteudo-principal .paineis .titulo{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: cal(1em + vw); /*calcular 1em - medida relativa de tamanho e vw - largura da nossa janela - usando js para aumentar e diminuir a fonte*/
+  }
+
+  /*trabalhando na seta*/
+
+  .conteudo-principal .paineis .seta{
+    background-image: url('../imagens/seta.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*se adequa ao tamanho e largura*/
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+  }
+
+  .conteudo-principal .paineis .seta.btn-voltar{
+      left:20px;
+      transform:rotateY(180deg); /*girar a seta*/ 
+  }
+
+  .conteudo-principal .paineis .seta.btn-avancar{
+    right:20px;
+    
+}
+
+/*quem somos*/
+
+.quem-somos{
+    background-color;#2941AB;
+}
+
+.quem-somos .conteudo{
+    display:flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.quem-somos .conteudo .informacoes{
+    width: 40%;
+}
+
+.quem-somos .conteudo .imagem{
+    width: 60%;
+}
+
+.quem-somos .conteudo .informacoes .titulo{
+    font-size: 50px;
+    color: #16a347;
+    margin-bottom: 20px;
+}
+
+.quem-somos .conteudo .informacoes .texto{
+    font-size: 20px;
+    line-height: 1,5;
+    color: #fff;
+    font-weight: 400;
+}
